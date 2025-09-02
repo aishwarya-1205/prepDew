@@ -1,3 +1,6 @@
+
+<img width="2239" height="1143" alt="image" src="https://github.com/user-attachments/assets/c20b3544-8ce0-4e10-b59c-2211b4ff65ac" />
+
 # PrepDew - AI-Powered Interview Preparation Platform
 
 A comprehensive full-stack web application that revolutionizes interview preparation by providing personalized, AI-generated questions and practice sessions tailored to specific roles and technologies.
