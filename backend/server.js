@@ -18,9 +18,14 @@ const app = express();
 //CORS Middleware
 app.use(
   cors({
-    origin: "*",
+    origin: [
+      "https://prep-dew.vercel.app/", // Replace with your actual Vercel URL
+      "http://localhost:5173", // Vite default port
+      "http://localhost:3000", // Alternative local port
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true, // Important if you're using cookies or auth headers
   })
 );
 
@@ -34,7 +39,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/sessions", sessionRoutes);
 app.use("/api/questions", questionRoutes);
 
-// // AI Routes (these should be POST routes, not middleware)
+// AI Routes (these should be POST routes, not middleware)
 app.post("/api/ai/generate-questions", protect, generateInterviewQuestions);
 app.post("/api/ai/generate-explanation", protect, generateConceptExplanation);
 
