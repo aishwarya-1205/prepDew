@@ -19,7 +19,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://prep-dew.vercel.app/", // Replace with your actual Vercel URL
+      "https://prep-dew.vercel.app", // Replace with your actual Vercel URL
       "http://localhost:5173", // Vite default port
       "http://localhost:3000", // Alternative local port
     ],
