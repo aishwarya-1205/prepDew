@@ -15,6 +15,9 @@ const {
 
 const app = express();
 
+const dns = require("dns");
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
+
 //CORS Middleware
 app.use(
   cors({
@@ -26,7 +29,7 @@ app.use(
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true, // Important if you're using cookies or auth headers
-  })
+  }),
 );
 
 connectDB();
